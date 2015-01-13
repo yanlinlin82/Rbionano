@@ -1,0 +1,10 @@
+Package: Rbionano
+Type: Package
+Title: R package for BioNano data manipulation and visualization
+Version: 0.1.0
+Date: 2015-01-13
+Author: Linlin Yan
+Maintainer: Linlin Yan <yanlinlin82@gmail.com>
+Description: Functions for manipulation and visualization BioNano data.
+License: GPL-2
+Depends: dplyr
