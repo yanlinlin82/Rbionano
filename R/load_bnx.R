@@ -2,11 +2,13 @@
 #'
 #' Load BioNano raw molecule data.
 #'
-load_bnx <- function(filename) {
+#' @param file  .bnx file to load
+#'
+load_bnx <- function(file) {
     a <- list()
 
     # load from .bnx file
-    lines <- scan(INPUT, what = "character", sep = "\n", comment.char = "#", quiet = TRUE)
+    lines <- scan(file, what = "character", sep = "\n", comment.char = "#", quiet = TRUE)
     stopifnot(length(lines) %% 4 == 0)
     dim(lines) <- c(4, length(lines) / 4)
 

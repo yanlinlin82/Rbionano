@@ -2,9 +2,9 @@
 #'
 #' Load alignment info from .xmap file.
 #'
-load_xmap <- function(filename, sort = TRUE, expandHitEnum = FALSE) {
+load_xmap <- function(file, sort = FALSE, expandHitEnum = FALSE) {
 
-	a <- tbl_df(read.table(filename, stringsAsFactors = FALSE))
+	a <- tbl_df(read.table(file, stringsAsFactors = FALSE))
 
 	colnames(a) <- c("xmapID", "qryID", "refID", "qryStart", "qryEnd",
 			"refStart", "refEnd", "orientation", "confidence", "hitEnum")

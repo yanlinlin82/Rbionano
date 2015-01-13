@@ -2,9 +2,9 @@
 #'
 #' Load BioNano consensus map.
 #'
-load_cmap <- function(filename, sort = TRUE) {
+load_cmap <- function(file, sort = FALSE) {
 
-	a <- tbl_df(read.table(filename))
+	a <- tbl_df(read.table(file, stringsAsFactors = FALSE))
 
 	colnames(a) <- c("cmapID", "contigLength", "numSites", "siteID",
 			"labelChannel", "position", "stddev", "coverage",

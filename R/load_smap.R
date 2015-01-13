@@ -2,9 +2,9 @@
 #'
 #' Load structural variants in .smap file.
 #'
-load_smap <- function(filename, sort = TRUE, checkBedFiles = FALSE) {
+load_smap <- function(file, sort = FALSE, checkBedFiles = FALSE) {
 
-	a <- tbl_df(read.table(filename, stringsAsFactors = FALSE))
+	a <- tbl_df(read.table(file, stringsAsFactors = FALSE))
 
 	if (ncol(a) >= 13) {
 		colnames(a) <- c("smapID", "qryID", "refID1", "refID2", "qryStart", "qryEnd",
@@ -17,11 +17,11 @@ load_smap <- function(filename, sort = TRUE, checkBedFiles = FALSE) {
 	}
 
     if (checkBedFiles) {
-        filename_bed_r <- gsub("\\.smap(\\.gz)?$", ".bed", filename) %>% check_if_gzipped
-        filename_bed_q <- gsub("\\.smap(\\.gz)?$", "_query.bed", filename) %>% check_if_gzipped
+        ref_bed_file <- gsub("\\.smap(\\.gz)?$", ".bed", file) %>% check_if_gzipped
+        qry_bed_file <- gsub("\\.smap(\\.gz)?$", "_query.bed", file) %>% check_if_gzipped
 
-        bed_r <- load_bed(filename_bed_r, sort = FALSE)
-        bed_q <- load_bed(filename_bed_q, sort = FALSE)
+        bed_r <- load_bed(ref_bed_file, sort = FALSE)
+        bed_q <- load_bed(qry_bed_file, sort = FALSE)
         indel <- a %>% select(type == "insertion" | type == "deletion")
 
         stopifnot(all(indel$refID1 == indel$refID2))
