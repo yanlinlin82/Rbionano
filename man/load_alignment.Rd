@@ -29,6 +29,6 @@ results are saved into three files, named as "xxx.xmap", "xxx_r.xmap" and
 "xxx_q.xmap".
 }
 \seealso{
-load_xmap load_cmap
+read_xmap read_cmap
 }
 
