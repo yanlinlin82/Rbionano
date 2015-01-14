@@ -1,13 +1,13 @@
-#' Load .bnx file
+#' Read .bnx file
 #'
-#' Load BioNano raw molecule data.
+#' Read BioNano raw molecule data.
 #'
-#' @param file  .bnx file to load
+#' @param file  .bnx file to read
 #'
-load_bnx <- function(file) {
+read_bnx <- function(file) {
     a <- list()
 
-    # load from .bnx file
+    # read from .bnx file
     lines <- scan(file, what = "character", sep = "\n", comment.char = "#", quiet = TRUE)
     stopifnot(length(lines) %% 4 == 0)
     dim(lines) <- c(4, length(lines) / 4)

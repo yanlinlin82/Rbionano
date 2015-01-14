@@ -1,13 +1,13 @@
-#' Load .align file
+#' Read .align file
 #'
 #' In BioNano data, alignment details are saved in .align files. This function
-#' is used to load such data.
+#' is used to read such data.
 #'
-#' @param file  .align file to load
+#' @param file  .align file to read
 #'
-#' @return 'load_align()' returns a data frame
+#' @return 'read_align()' returns a data frame
 #'
-load_align <- function(file) {
+read_align <- function(file) {
 
     s <- scan(file, what = "character", sep = "\n", comment.char = "#", quiet = TRUE)
     stopifnot(length(s) %% 3 == 0)

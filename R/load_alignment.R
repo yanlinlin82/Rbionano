@@ -14,7 +14,7 @@
 #' @return 'load_alignment()' returns a list, which contains three data frames,
 #'     named as 'xmap', 'ref' and 'qry'.
 #'
-#' @seealso load_xmap load_cmap
+#' @seealso read_xmap read_cmap
 #'
 load_alignment <- function(file, ref_file, qry_file,
                            sort = FALSE, expandHitEnum = FALSE)
@@ -29,7 +29,7 @@ load_alignment <- function(file, ref_file, qry_file,
         }
     }
 
-    return(list(xmap = load_xmap(file, sort, expandHitEnum),
-                ref = load_cmap(ref_file, sort),
-                qry = load_cmap(qry_file, sort)))
+    return(list(xmap = read_xmap(file, sort, expandHitEnum),
+                ref = read_cmap(ref_file, sort),
+                qry = read_cmap(qry_file, sort)))
 }

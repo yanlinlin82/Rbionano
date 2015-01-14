@@ -1,8 +1,8 @@
-#' Load .xmap file
+#' Read .xmap file
 #'
-#' Load alignment info from .xmap file.
+#' Read alignment info from .xmap file.
 #'
-load_xmap <- function(file, sort = FALSE, expandHitEnum = FALSE) {
+read_xmap <- function(file, sort = FALSE, expandHitEnum = FALSE) {
 
 	a <- tbl_df(read.table(file, stringsAsFactors = FALSE))
 

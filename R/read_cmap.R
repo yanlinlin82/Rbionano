@@ -1,8 +1,8 @@
-#' Load .cmap file
+#' Read .cmap file
 #'
-#' Load BioNano consensus map.
+#' Read BioNano consensus map.
 #'
-load_cmap <- function(file, sort = FALSE) {
+read_cmap <- function(file, sort = FALSE) {
 
 	a <- tbl_df(read.table(file, stringsAsFactors = FALSE))
 

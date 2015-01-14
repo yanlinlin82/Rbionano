@@ -1,17 +1,17 @@
-#' Load .bed file
+#' Read .bed file
 #'
 #' BioNano structural variants are usually exported as BED files for
 #' visualization in IrysView application.
 #'
-#' @param file  .bed file to load
+#' @param file  .bed file to read
 #' @param sort  logical. If "TRUE", the results will be sorted by
 #'              genomic coordinates, otherwise to keep order as in file
 #'
-#' @return 'load_bed()' returns a data frame
+#' @return 'read_bed()' returns a data frame
 #'
-#' @seealso load_smap
+#' @seealso read_smap
 #'
-load_bed <- function(filename, sort = FALSE) {
+read_bed <- function(filename, sort = FALSE) {
 
 	a <- tbl_df(read.table(filename, stringsAsFactors = FALSE))
 

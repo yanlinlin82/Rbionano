@@ -1,8 +1,8 @@
-#' Load inversions
+#' Read inversions
 #'
-#' Load inversions from .inv file.
+#' Read inversions from .inv file.
 #'
-load_inv <- function(file) {
+read_inv <- function(file) {
 
     a <- tbl_df(read.table(file, skip = 1, stringsAsFactors = FALSE))
     colnames(a) <- c("ref",
