@@ -1,4 +1,4 @@
-#' Rbionano: R package for BioNano data manipulation and visualization
+#' R package for BioNano data manipulation and visualization
 #'
 #' @name Rbionano-package
 #' @docType package

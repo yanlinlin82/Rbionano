@@ -3,9 +3,9 @@
 \docType{package}
 \name{Rbionano-package}
 \alias{Rbionano-package}
-\title{Rbionano: R package for BioNano data manipulation and visualization}
+\title{R package for BioNano data manipulation and visualization}
 \description{
-Rbionano: R package for BioNano data manipulation and visualization
+R package for BioNano data manipulation and visualization
 }
 \details{
 Rbionano provides functions to manipulate and visualize BioNano data.
