@@ -23,7 +23,7 @@ read_align <- function(file) {
         a$token <- NULL
 
         a$align <- apply(s[-1, , drop = FALSE], 2, function(x) {
-            x %>% strsplit("\t", fix = TRUE) %>% sapply(as.integer) %>% as.data.frame %>% tbl_df
+            x %>% strsplit("\t", fixed = TRUE) %>% sapply(as.integer) %>% as.data.frame %>% tbl_df
         })
     }
     return(a)
