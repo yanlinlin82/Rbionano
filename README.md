@@ -6,7 +6,7 @@ R package for BioNano data manipulation and visualization
 
 Installation from GitHub:
 
-    install.package("devtools")
+    install.packages("devtools")
     devtools::install_github("yanlinlin82/Rbionano")
 
 ## Build from Source
