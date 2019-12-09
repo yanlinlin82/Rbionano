@@ -1,6 +1,8 @@
 # Rbionano
 
-R package for BioNano data manipulation and visualization
+**WARNING: This is an obsolete package, which may not be valid for the latest data format. Please try to find other substitutes. Sorry for the inconvenience.**
+
+R package for BioNano data manipulation and visualization.
 
 ## Quick Start
 
